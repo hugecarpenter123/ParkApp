@@ -1,0 +1,133 @@
+/* --------------------- parking spots --------------- */
+
+.left {
+  left: 2%;
+  bottom: 59%;
+  height: 6%;
+  width: 13%;
+  transform: rotate(-88deg);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.first {
+  left: 10%;
+  bottom: 60%;
+  height: 9%;
+  width: 12%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.second {
+  left: 19.8%;
+  bottom: 53.2%;
+  height: 9%;
+  width: 9%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.second_one {
+  left: 22%;
+  bottom: 64%;
+  height: 4.5%;
+  width: 1%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.second_two {
+  left: 22.5%;
+  bottom: 65.5%;
+  height: 9%;
+  width: 3.5%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.fourth {
+  left: 23.5%;
+  bottom: 56%;
+  height: 9%;
+  width: 18%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.sixth {
+  left: 31.5%;
+  bottom: 52%;
+  height: 10%;
+  width: 20%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.eighth {
+  left: 39%;
+  bottom: 50%;
+  height: 9%;
+  width: 23%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(17, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.tenth {
+  left: 47.5%;
+  bottom: 47%;
+  height: 10%;
+  width: 24%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.eleventh {
+  left: 56%;
+  bottom: 47.5%;
+  height: 10%;
+  width: 25%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(19, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.twelfth {
+  left: 66%;
+  bottom: 50.5%;
+  height: 9%;
+  width: 21.5%;
+  transform: rotate(-90deg);
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.bottom {
+  left: 74.3%;
+  bottom: 34.9%;
+  height: 4.5%;
+  width: 2%;
+  transform: rotate(-88deg);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.last {
+  left: 73%;
+  bottom: 51.5%;
+  height: 5%;
+  width: 20%;
+  transform: rotate(-88deg);
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: 1fr;
+}

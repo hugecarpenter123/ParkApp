@@ -1,0 +1,31 @@
+.wrapper {
+  margin: 20px auto;
+  width: 60%;
+  background-color: inherit;
+  position: relative;
+}
+
+.wrapper img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.base {
+    display: grid;
+    grid-gap: 2px;
+    position: absolute;
+    background-color: yellow;
+    opacity: 0.35;
+}
+
+/* ------------------ parking status ------------------ */
+.free {
+  background-color: green;
+}
+
+.occupied {
+  background-color: red;
+}
+/* --------------------------------------------------- */

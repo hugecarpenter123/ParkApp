@@ -1,0 +1,91 @@
+{% extends 'parking/base.html' %}
+{% load static %}
+{% block static %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'parking/css/master.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static css %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'parking/css/parking.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'parking/css/main.css' %}">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'parking/css/font_media.css' %}">
+
+  <script type="text/javascript" defer>const pk = {{location.id}}; console.log(pk);</script>
+  <script type="text/javascript" defer src="{% static 'parking/js/master2.js' %}"></script>
+  <script type="text/javascript" defer src="{% static 'parking/js/parking.js' %}"></script>
+  <script type="text/javascript" defer src="{% static 'parking/js/charts.js' %}"></script>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+{% endblock static %}
+
+{% block content %}
+<body>
+
+<nav class="menu-nav menu-nav-VER1 w3-small w3-hide-small w3-center w3-black">
+  <img src="{% static 'parking/images/logo.png' %}" style="width:100%">
+    <a href="{% url 'index' %}" class="w3-bar-item w3-button w3-padding-large">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a href="{% url 'parkingi' %}" class="w3-bar-item w3-button w3-padding-large icon_chosed">
+      <i class="fa fa-car w3-xxlarge choose-menu-icon"></i>
+      <p>PARKING</p>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+</nav>
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+	<div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+
+		<a href="{% url 'index' %}" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+		<a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+		<a href="#parking" class="w3-bar-item w3-button" style="width:25% !important">PARKING</a>
+		<a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+	</div>
+</div>
+<div class="main-wrapper">
+    <div class="header">Parking {{location.name}}</div>
+  <div class="wrapper">
+    <img src="{% static image %}" alt="">
+
+      {% for section in location.section_set.all %}
+        <div class="{{section.name}} base">
+          {% for spot in section.spot_set.all %}
+            <div class="{{spot.status}}" data-grid="{{spot.row}}.{{spot.column}}"></div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+
+      <a href="{% url 'parking' prev.id %}"><div class="arrow-left">&#60;<span>{{prev.name}}</span></div></a>
+      <a href="{% url 'parking' next.id %}"><div class="arrow-right">&#62<span>{{next.name}}</span></div></a>
+  </div>
+  <nav class="navigation">
+    <a href="{% url 'parkingi' %}"><div id="back-menu">Powrót do menu</div></a>
+    <a><div id="show-janus">Wyświetl statystyki</div></a>
+    <a><div id="show-info">Wyświetl informacje</div></a>
+  </nav>
+  <div class="popup-info">
+    <div class="left-column">
+      <label>Wolne miejsca:</label>
+      <label>Zajęte miejsca:</label>
+      <label>Płatny:</label>
+      <label>Adres:</label>
+      <label>Plus-code:</label>
+    </div>
+    <div class="right-column">
+      <span id="free-spot-input" style="color: #5dda00 ;">{{free}}</span>
+      <span id="occupied-spot-input" style="color:red;">{{occupied}}</span>
+      <span>{% if location.isFree == 'free' %}Nie{% else %}Tak{% endif %}</span>
+      <span class="address-tag">
+        <img src="{% static 'parking/images/Pointer.png' %}">
+        <a target="_blank" href="{{address_href}}">{{location.address}}</a>
+      </span>
+      <span>{{location.plus_code}}</span>
+    </div>
+  </div>
+  <div id="myChart"></div>
+</div>
+</body>
+{% endblock content %}

@@ -1,0 +1,54 @@
+.upper{
+  width: 62%;
+  height: 10%;
+  background-color: yellow;
+  position: absolute;
+  top: 14%;
+  left: 8%;
+  transform: rotate(-11deg);
+  opacity: 0.35;
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 2px;
+}
+
+.middle {
+  width: 54%;
+  height: 19%;
+  top: 28%;
+  left: 21%;
+  transform: rotate(-11deg);
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.left {
+  left: 2%;
+  bottom: 41%;
+  height: 10%;
+  width: 26%;
+  transform: rotate(-110deg);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.bottom {
+  left: 27%;
+  bottom: 34%;
+  height: 10%;
+  width: 21%;
+  transform: rotate(-11deg);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.right-corner {
+  height: 11%;
+  width: 37%;
+  left: 54%;
+  bottom: 17%;
+  transform: rotate(-27deg);
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 1fr;
+}

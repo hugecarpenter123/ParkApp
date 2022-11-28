@@ -1,0 +1,75 @@
+/* --------------------- parking spots --------------- */
+
+.left {
+  left: 1%;
+  bottom: 55%;
+  height: 8%;
+  width: 14%;
+  transform: rotate(-150deg);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.first {
+  left: 13%;
+  bottom: 65%;
+  height: 8%;
+  width: 24%;
+  transform: rotate(-235deg);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.second {
+  left: 21%;
+  bottom: 57%;
+  height: 8%;
+  width: 24%;
+  transform: rotate(-235deg);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr;
+}
+
+
+.fourth {
+  left: 29%;
+  bottom: 43%;
+  height: 14%;
+  width: 28%;
+  transform: rotate(-235deg);
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.sixth {
+  left: 44%;
+  bottom: 32%;
+  height: 14%;
+  width: 22%;
+  transform: rotate(-235deg);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.eighth {
+  left: 56%;
+  bottom: 23%;
+  height: 13%;
+  width: 23%;
+  transform: rotate(-235deg);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.tenth {
+  left: 70%;
+  bottom: 12%;
+  height: 14%;
+  width: 17%;
+  transform: rotate(-235deg);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
