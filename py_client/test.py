@@ -41,7 +41,7 @@ upper = all_data['section_qs'][0]['spot_qs']
 # modify_random(id_set)
 
 HUGEEEE_ID_SET = []
-for i in range(1,5):
+for i in range(1,6):
     all_data = get_method(i)
     for section in all_data['section_qs']:
         # print(section['spot_qs'])

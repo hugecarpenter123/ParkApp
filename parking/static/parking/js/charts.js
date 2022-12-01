@@ -6,7 +6,8 @@ showStatistics.addEventListener('click', () => {
         chart.style.display = 'block';
         setTimeout(()=>{
             chart.style.opacity = 1;
-        },1)
+            window.scrollBy(0,300);
+        }, 1)
     } else {
         chart.style.opacity = 0;
         setTimeout(()=>{
@@ -35,10 +36,8 @@ function parseData(data) {
 
     data.forEach((obj) => {
         let tmp = new Date (obj.date)
-//        if (tmp.getDate == today_day - 1) {
-//            yesterday.push(tmp)
-//        }
-        if (tmp.getDate() == today_day && tmp.getMonth() == today_month) {
+        // compare previous day
+        if (tmp.getDate() == (today_day - 1) && (tmp.getMonth() == today_month || today_day == 1 && tmp.getMonth() + 1 == today_month)) {
             yesterday.push(tmp.getHours())
         }
     })

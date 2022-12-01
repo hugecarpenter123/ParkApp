@@ -1,0 +1,50 @@
+<!-- mark the current page on navbar with 'bg: black' -->
+<style>
+{% if request.path == "/" %}
+    .menu-nav a:nth-child(1) {
+        background-color: black;
+    }
+    .menu-nav a:nth-child(1):hover {
+        background-color: #d3d3d3;
+    }
+
+{% elif request.path == "/parkingi/" or parking_path %}
+    .menu-nav a:nth-child(2) {
+        background-color: black;
+    }
+    .menu-nav a:nth-child(2):hover {
+        background-color: #d3d3d3;
+    }
+{% endif %}
+</style>
+<!------------------------------------------------------->
+
+  <nav class="menu-nav">
+    <a href="{% url 'index' %}" class="">
+      <i class="fa fa-home"></i>
+      <p>HOME</p>
+    </a>
+    <a href="{% url 'parkingi' %}" class="">
+      <i class="fa fa-car"></i>
+      <p>PARKING</p>
+    </a>
+    <a href="" class="">
+      <i class="fa fa-envelope"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
+
+  <nav class="menu-nav-small">
+    <a href="{% url 'index' %}" class="">
+      <p>HOME</p>
+    </a>
+    <a href="#" class="">
+      <p>ABOUT</p>
+    </a>
+    <a href="{% url 'parkingi' %}" class="">
+      <p>PARKING</p>
+    </a>
+    <a href="#" class="">
+      <p>CONTACT</p>
+    </a>
+  </nav>

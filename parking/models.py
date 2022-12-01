@@ -71,14 +71,10 @@ class Spot(models.Model):
     def onStatusChange(self, sender, instance, **kwargs):
         if instance.id:
             location = instance.section.location
-            print("----------------")
-            print(location)
-            print("----------------")
             current_status = instance.status
             previous_status = Spot.objects.get(id=instance.id).status
             if previous_status == 'free' and current_status == "occupied":
                 Motion.objects.create(location=location)
-                print('tutaj będzie counter++')
 
     def __str__(self):
         return f'{self.section}/{self.row}.{self.column}'

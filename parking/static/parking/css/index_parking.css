@@ -1,3 +1,59 @@
+.search-bar {
+	width: 50%;
+  min-width: 300px;
+	margin: auto;
+}
+	.search-bar input {
+    font-size: 1.1rem;
+		outline: none;
+		width: 100%;
+		padding: 8px 4px;
+		margin-bottom: 1cm;
+		box-shadow: 2px 2px 4px black;
+	}
+
+#parking {
+  padding-bottom: 20px;
+}
+
+  #gallery_view {
+  	display: grid;
+  	gap: 1rem;
+  	grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+  	grid-auto-rows: minmax(200px 300px);
+  	justify-content: center;
+  }
+
+    .gallery {
+      margin: 5px;
+    	background-color: #c3c3c3;
+    	color: black;
+    	cursor: pointer;
+    	transition-duration: 0.1;
+      border-radius: 10px;
+    }
+
+    .gallery:hover {
+      transform: scale(1.01);
+    }
+
+      .gallery a {
+      	height: 80%;
+      }
+
+        .gallery img {
+          width: 100%;
+          height: 75%;
+          object-fit: cover;
+          	border-top-left-radius: 10px;
+        	border-top-right-radius: 10px;
+        }
+
+      .gallery .img_title {
+        padding: 15px;
+        text-align: center;
+      }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -94,7 +150,7 @@ a {
   width: 75%;
   height: fit-content;
   min-height: 50px;
-  margin: 0 auto 20px auto;
+  margin: auto;
   display: flex;
   transition-duration: 0.2s;
 }
@@ -186,43 +242,15 @@ body {
 }
 
 
-@media (max-width: 1000px) {
-    .wrapper {
-        width: 70%;
-    }
-    body {
-        height: auto;
-    }
-}
-
 @media (max-width: 600px) {
-  .main-wrapper {
-    margin: 50px 0 0 0;
-   }
+  #gallery_view {
+    grid-template-columns: repeat(auto-fit, 70%);
+    grid-auto-rows: minmax(200px 300px);
+  }
 
-  .navigation {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-   }
-
-   .navigation a {
-    width: fit-content;
-    min-width: 220px;
-    padding: 10px 5px;
-   }
-
-    .wrapper {
-        margin: 20px auto;
-        width: 90%;
-        height: auto;
-    }
-    .wrapper img {
-      height: 100%;
-      width: 100%;
-    }
-    .arrow-right {
-        right: 20px;
-    }
+  .search-bar {
+    width: 70%;
+  }
 }
+
+

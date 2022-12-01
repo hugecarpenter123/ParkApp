@@ -35,7 +35,6 @@ def parking_space_api(request, pk=None, *args, **kwargs):
 @api_view(['GET'])
 def locations_api(request):
     if request.method == "GET":
-        print(request.GET)
         if request.GET.get('search'):
             query = request.GET.get('search')
             objects = Location.objects.filter(name__icontains=query)
@@ -50,19 +49,11 @@ def locations_api(request):
 
 @api_view(['GET'])
 def statistics_api(request, pk=None, *args, **kwargs):
-    print("statistics api called()")
     if request.method == "GET":
-        print("method: GET")
         if pk:
-            print("pk:", pk)
             location = Location.objects.get(pk=pk)
-            # print("location:", location)
             objects = location.motion_set.all()
-            # print("objects:", objects)
             serializer = MotionSerializer(instance=objects, many=True)
-            print('serializer:', serializer)
-            print('serializer.data:', serializer.data)
-
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             objects = Motion.objects.all()

@@ -24,7 +24,8 @@ def parking(request, pk):
         'css': 'parking/css/css_{}.css'.format(location.image),
         'free': wolne,
         'occupied':  zajete,
-        'address_href': f'https://www.google.com/maps/place/{(location.address).replace(" ", "+")}'
+        'address_href': f'https://www.google.com/maps/place/{(location.address).replace(" ", "+")}',
+        'parking_path': True,
     }
     return render(request, 'parking/parking.html', context)
 

@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #414141;
+  height: 100vh;
+  margin-left: 120px;
+  font-family: "Montserrat", sans-serif
+}
+
+/* ------------- menu navigation big -------------- */
+.menu-nav {
+  background-color: #222222;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .menu-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 100px;
+    margin: 2px;
+    transition-duration: 0.1s;
+  }
+
+  .menu-nav a:hover {
+    background-color: #d3d3d3;
+  }
+  .menu-nav a:hover i,
+  .menu-nav a:hover p {
+    color: black;
+  }
+
+    .menu-nav i {
+      font-size: 36px;
+      color: white;
+    }
+
+/* -------------- menu navigation small --------------- */
+.menu-nav-small {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  flex: 1;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Verdana;
+  font-size: 0.8rem;
+  display: none;
+}
+
+  .menu-nav-small a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #979797;
+  }
+
+  .menu-nav-small a:hover {
+    background-color: #d3d3d3;
+    color: black;
+  }
+
+/* -------------- header --------------- */
+header {
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+  header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header span {
+    font-family: Verdana;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    margin-left: 30px;
+    text-shadow: 7px 7px 4px black;
+  }
+
+  header #icon_location {
+    color: red;
+    text-shadow: 7px 7px 4px black;
+    font-size: 6rem;
+  }
+
+@keyframes flicker {
+  0%   {color:#ff8080;}
+  100% {color:red;}
+}
+
+#icon_location{
+	animation-name: flicker;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-out;
+}
+
+
+.front-img-wrapper {
+  text-align: center;
+}
+
+  .front-img {
+    width: 70%;
+    max-height: 70vh;
+    object-fit: cover;
+  }
+
+
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+
+  header {
+    padding-top: 70px;
+  }
+
+  .menu-nav {
+    display: none;
+  }
+
+  .menu-nav-small {
+    display: flex;
+  }
+
+}

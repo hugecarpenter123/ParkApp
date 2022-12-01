@@ -14,6 +14,7 @@ async function getData(url, update=false) {
   .then((response) => response.json())
   .then((data) => {
     if(update) {
+      console.log('update')
       updateParkingSpaces(data)
     } else {
       getDom(data)
